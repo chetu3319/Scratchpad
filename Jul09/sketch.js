@@ -36,9 +36,7 @@ canvasSketch(() => {
   // ...
   setup();
   // Attach events to window to receive them
-  window.mouseClicked = () => {
-    console.log("Mouse clicked");
-  };
+  window.mouseClicked = () => {};
 
   // Return a renderer to 'draw' the p5.js content
   return ({ playhead, width, height }) => {

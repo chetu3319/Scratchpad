@@ -1,0 +1,16 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  /* Drop shadow*/
+  box-shadow: 5px 5px 30px #000;
+  /* Center Align*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
