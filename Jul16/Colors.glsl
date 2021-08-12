@@ -53,7 +53,7 @@ void main()
     st = fract(st);
     vec3 color = vec3(0.);
     color = vec3(st.x,st.y,abs(sin(u_time)));
-    color = vec3(drawCircle(st, vec2(0.5,0.5),.1 +drawCircle(original,u_mouse/u_resolution.xy,0.1)/10.));
+    color = vec3(drawCircle(st, vec2(0.5,0.5),.1 + 1.0 - length(original - u_mouse/u_resolution.xy)*10.));
     vec3 a = color *vec3( drawCircle(original,u_mouse/u_resolution.xy,0.1),0.0,0.0 );
      color -=vec3(drawCircle(original,u_mouse/u_resolution.xy,0.1),0.0,1.0 );
      color +=a; 
