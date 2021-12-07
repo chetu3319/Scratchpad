@@ -109,7 +109,7 @@ function RenderGridObjects() {
   // gridObjs.sort((a, b) => {
   //   return b.t - a.t;
   // });
-  blendMode(OVERLAY);
+  // blendMode(OVERLAY);
   // let n = noise(frameCount / 1000.0);
   // n = map(n, 0, 1, 0, gridObjs.length);
 
@@ -160,25 +160,37 @@ function RenderGridObjects() {
       fill(c);
       noStroke();
 
-      rect(obj.x, obj.y, obj.w * obj.scale, obj.h * obj.scale);
+      rect(obj.x, obj.y, obj.w, obj.h);
       // text(obj.t.toFixed(3), obj.x, obj.y);
     }
   }
 
-  counter++;
-  if (counter > 1000) {
-    //randomly at 0.1 probability change time
-    for (let i = 0; i < gridObjs.length; i++) {
-      for (let j = 0; j < gridObjs[i].length; j++) {
-        let obj = gridObjs[i][j];
-        if (random(0, 1) < 0.1) {
-          obj.t += random(0.01, 1);
-        }
+  // counter++;
+  // if (counter > 1000) {
+  //   //randomly at 0.1 probability change time
+  //   for (let i = 0; i < gridObjs.length; i++) {
+  //     for (let j = 0; j < gridObjs[i].length; j++) {
+  //       let obj = gridObjs[i][j];
+  //       if (random(0, 1) < 0.1) {
+  //         obj.t += random(0.01, 1);
+  //       }
+  //     }
+  //   }
+  //   counter = 0;
+  // }
+}
+
+window.onclick = function (e) {
+  //randomly at 0.1 probability change time
+  for (let i = 0; i < gridObjs.length; i++) {
+    for (let j = 0; j < gridObjs[i].length; j++) {
+      let obj = gridObjs[i][j];
+      if (random(0, 1) < 0.1) {
+        obj.t += random(0.01, 1);
       }
     }
-    counter = 0;
   }
-}
+};
 
 function ColorGenerator() {
   this.a = createVector(0.5, 0.5, 0.5);

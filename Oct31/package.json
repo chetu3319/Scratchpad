@@ -1,0 +1,16 @@
+{
+  "name": "sept18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vera1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas-sketch": "^0.7.4",
+    "p5": "^1.4.0"
+  }
+}
