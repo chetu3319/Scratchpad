@@ -1,9 +1,3 @@
-/**
- * A p5.js example integrating with canvas-sketch.
- * Here, canvas-sketch handles the frame loop, resizing
- * and exporting.
- * @author Matt DesLauriers (@mattdesl)
- */
 
 const canvasSketch = require("canvas-sketch");
 import { Vector } from "p5";
